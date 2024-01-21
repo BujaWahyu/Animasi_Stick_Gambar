@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Wahyu Ramadhan Arianto</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.parent{
+			/* border: 2px solid black;  */
+			display: grid;
+			width: 70%;
+			margin: 0px auto;
+			grid-template-columns: 250px 250px;
+			/* grid-template-rows: 150px 150px; */
+			justify-content: space-around;
+		}
+		.gambar1 .img2:hover{
+			z-index: 2;
+		}
+		.gambar2 .img2:hover{
+			z-index: 2;
+		}
+		.gambar1 .img1:hover{
+			z-index: 2;
+		}
+		.gambar2 .img1:hover{
+			z-index: 2;
+		}
+		img{
+			display: block;
+			width: 150px;
+			height: 150px;
+			transition: transform 1.5s;
+		}
+		.gambar2 .img2{
+			animation-name: rotasiGambar2;
+			animation-duration: 2s;
+			animation-fill-mode: forwards;
+		}
+		.gambar1 .img2{
+			animation-name: rotasiGambar2;
+			animation-duration: 2s;
+			animation-fill-mode: forwards;
+		}
+		.img2:hover img{
+			transform: rotate(45deg) scale(1.6);
+			transition: 1.5s;
+
+		}
+		.img1:hover img{
+			transform: rotate(-45deg) scale(1.6);
+			transition: 1.5s;
+		}
+		.gambar1 .img1{
+			animation-name: rotasiGambar;
+			animation-duration: 2s;
+			animation-fill-mode: forwards;
+		}
+		.gambar2 .img1{
+			animation-name: rotasiGambar;
+			animation-duration: 2s;
+			animation-fill-mode: forwards;
+		}
+		.gambar1{
+			/* border: 1px solid black; */
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			animation-name: gambar-1;
+			animation-duration: 2s;
+			overflow-y: hidden;
+		}
+		.gambar2{
+			display: flex;
+			animation-name: gambar-2;
+			animation-duration: 2s;
+			flex-direction: column;
+			align-items: center;
+			/* border: 1px solid black; */
+		}
+		.tongkat{
+			width: 30px;
+			height: 150px;
+			/* border: 1px solid black; */
+			background-color: gray;
+			border-radius: 10px 10px 0 0;
+			box-shadow: 1px 1px 1px black;
+		}
+		.tongkat1{
+			width: 150px;
+			height: 150px;
+			display: flex;
+			/* border: 1px solid black; */
+			/* align-items: center; */
+			justify-content: center;
+		}
+		.tongkat3{
+			width: 30px;
+			height: 150px;
+			box-shadow: 1px 1px 3px black;
+			/* border: 1px solid black; */
+			background-color: gray;
+			border-radius: 0 0 10px 10px;
+		}
+		.stik{
+			width: 20%;
+			/* border: 1px solid black; */
+			background-color: gray;
+			box-shadow: 1px 1px 1px black;
+		}
+		.pertama{
+			border-radius: 10px 10px 0 0;
+		}
+		.kedua{
+			border-radius: 0 0 10px 10px;
+		}
+
+		@keyframes gambar-1 {
+			0%{transform: translateY(-100%);}
+			100%{transform: translateY(0);}
+		}
+		@keyframes gambar-2{
+			0%{transform: translateY(100%);}
+			100%{transform: translateY(0);}
+		}
+		@keyframes rotasiGambar {
+			0%{transform: rotate(0);}
+			50%{transform: rotate(0);}
+			100%{transform: rotate(45deg);}
+		}
+		@keyframes rotasiGambar2 {
+			0%{transform: rotate(0);}
+			50%{transform: rotate(0);}
+			100%{transform: rotate(-45deg);}
+		}
+	
+	</style>
+</head>
+<body>
+
+	<div class="parent">
+		<div class="gambar1">
+			<div class="tongkat"></div>
+			<div class="img1"><img src="img/1.png" alt="wahyu"></div>
+			<div class="img2"><img src="img/3.jpeg" alt="wahyu"></div>
+			<div class="img1"><img src="img/5.jpg" alt="wahyu"></div>
+			<div class="tongkat3"></div>
+		</div>
+		<div class="gambar2">
+			<div class="tongkat"></div>
+			<div class="img1"><img src="img/2.jpg" alt="wahyu"></div>
+			<div class="img2"><img src="img/4.jpeg" alt="wahyu"></div>
+			<div class="img1"><img src="img/6.jpg" alt="wahyu"></div>
+			<div class="tongkat3"></div>
+		</div>
+	</div>
+
+	
+</body>
+</html>
